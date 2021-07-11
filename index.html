@@ -5,52 +5,200 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>COVID-19 Tracker</title>
+    <title>COVID-19 TRACKER</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="img/logo.png" alt="logo">
-            <p>COVID-19 <br>STATS </p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <div class="stats">
-            <div class="latest-report">
-                <div class="country">
-                    <div class="name">Loading...</div>
-                    <div class="change-country">change</div>
+    <div class="nav-wrapper">
+        <div class="container">
+            <div class="nav">
+                <a href="" class="logo">C <i class="bx bxs-virus-block bx-tada"></i>VID TRACKER </a>
+                <div class="darkmode-switch">
+                    <span>
+                        <i class="bx bxs-moon"></i>
+                        <i class="bx bxs-moon"></i>
+                    </span>
                 </div>
-                <div class="total-cases">
-                    <div class="title">Total Cases</div>
-                    <div class="value">0</div>
-                    <div class="new-value">+0</div>
-                </div>
-                <div class="recovered">
-                    <div class="title">Total Recovered</div>
-                    <div class="value">0</div>
-                    <div class="new-value">+0</div>
-                </div>
-                <div class="deaths">
-                    <div class="title">Total Deaths</div>
-                    <div class="value">0</div>
-                    <div class="new-value">+0</div>
-                </div>
-
-
             </div>
         </div>
-    </main>
+    </div>
 
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 col-md-6 col-sm-12">
+                    <div class="box">
+                        <div class="country-select" id="country-select">
+                            <div class="country-select-toggle" id="country-select-toggle">
+                                <span>
+                                    Global
+                                </span>
+                                <i class="bx bx-chevron-down"></i>
+                            </div>
+                            <div class="country select list" id="country-select-list">
+                                <input type="text" placeholder="Country">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-8 col-md-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-4 col-md-4 col-sm-12">
+                            <div class="box box-hover">
+                                <div class="count count-confirmed">
+                                    <div class="count-icon">
+                                        <i class="bx bxs-virus">
+
+                                        </i>
+                                    </div>
+                                    <div class="count-info">
+                                        <h5 class="confirmed-total">
+                                            123,456,789
+                                        </h5>
+                                        <span>Confirmed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-4 col-sm-12">
+                            <div class="box box-hover">
+                                <div class="count count-recovered">
+                                    <div class="count-icon">
+                                        <i class="bx bxs-smile">
+
+                                        </i>
+                                    </div>
+                                    <div class="count-info">
+                                        <h5 class="confirmed-total">
+                                            123,456,789
+                                        </h5>
+                                        <span>Recovered</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-4 col-sm-12">
+                            <div class="box box-hover">
+                                <div class="count count-death">
+                                    <div class="count-icon">
+                                        <i class="bx bxs-sad">
+
+                                        </i>
+                                    </div>
+                                    <div class="count-info">
+                                        <h5 class="confirmed-total">
+                                            123,456,789
+                                        </h5>
+                                        <span>Deaths</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="box">
+                                <div class="box-header">all times</div>
+                                <div class="box-body">
+                                    <div id="all-time-chart">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-6 col-sm-12">
+                            <div class="box">
+                                <div class="box-header">
+                                    What is COVID-19?
+                                </div>
+                                <div class="box-body">
+                                    <!-- Link of the video -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-4 col-md-12 col-sm-12">
+                    <div class="box">
+                        <div class="box-header">
+                            Last 30 Days
+                        </div>
+                        <div class="box-body">
+                            <div id="days-chart">
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="box">
+                        <div class="box-header">
+                            Recovery Rate
+                        </div>
+                        <div class="box-body">
+                            <div class="recovery-rate-chart"></div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="box-header">Top Countries Affected</div>
+                        <div class="box-body">
+                            <table class="table-countries" id="table-countries">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Country
+                                        </th>
+                                        <th>Confirmed</th>
+                                        <th>Recovered</th>
+                                        <th>Deaths</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        Source from <a
+            href="https://documenter.getpostman.com/view/10808728/SzS8rjbc#b07f97ba-24f4-4ebe-ad71-97fa35f3b683"
+            target="_blank">api.covid19api.com</a>
+        <br>
+        Designed by <a href="https://www.youtube.com/tuattrananh" target="_blank">Tuat Tran Anh</a>
+    </div>
+
+    <div class="loader">
+        <div class="bx bxs-virus bx-spin"></div>
+    </div>
+
+
+    <!-- apexcharts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- JS -->
+    <script src="js/app.js"></script>
+    <script src="js/fetchAPI.js"></script>
+    <script src="js/COVID19API.js"></script>
 </body>
 
 </html>
