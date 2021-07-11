@@ -64,17 +64,17 @@ body {
 
 .logo {
     color: var(--color-txt);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 900;
 }
 
 .logo i {
-    color: red;
+    color: rgb(255, 0, 0);
 }
 
 .darkmode-switch {
-    --width: 60px;
-    --height: 20px;
+    --width: 50px;
+    --height: 15px;
     width: var(--width);
     height: var(--height);
     background-color: lightslategray;
@@ -194,7 +194,7 @@ body {
     outline: none;
     background-color: #e2e8f0;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 50px;
 }
 
 .country-select-list.active {
@@ -240,7 +240,7 @@ body {
 
 .count-info span {
     display: inherit;
-    margin-top: -14px;
+    margin-top: -10px;
     text-transform: uppercase;
     font-weight: 700;
 }
